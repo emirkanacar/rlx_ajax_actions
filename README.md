@@ -19,3 +19,5 @@ Change timeout:
   * Change Timeout:
     - Open ajax-accept.php, edit '$timedOut' variable value
  
+
+This project using: jquery, semantic ui
