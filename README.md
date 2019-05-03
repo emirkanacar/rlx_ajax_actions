@@ -17,7 +17,8 @@ Change timeout:
   * Edit Number of Request :
     - Open ajax-accept.php, edit '$requestCount' variable value
   * Change Timeout:
-    - Open ajax-accept.php, edit '$timedOut' variable value
- 
+    - Open ajax-accept.php, edit '$timedOut' variable 
+  
+  * If you using https you need change '$https' bool in ajax-accept.php
 
 This project using: jquery, semantic ui
