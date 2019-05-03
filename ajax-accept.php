@@ -6,6 +6,8 @@
     $requestCount = 10;
     $timedOut = 60;
 
+    $https(bool) = false;
+
     $dataTimeInit = date("Y-m-d H:i:s");
 
     if(!isset($_SESSION['FIRST_REQUESTED_TIME']))
@@ -47,7 +49,13 @@
 
     if(isset($_SERVER['HTTP_ORIGIN']))
     {
-        $address = 'http://' . $_SERVER['SERVER_NAME'];
+        if($https == true)
+        {
+           $address = 'https://' . $_SERVER['SERVER_NAME'];
+        }else{
+           $address = 'http://' . $_SERVER['SERVER_NAME'];
+        }
+
         if(strpos($address, $_SERVER['HTTP_ORIGIN']) !== 0)
         {
             exit(json_encode([
