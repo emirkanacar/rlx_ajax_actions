@@ -37,7 +37,7 @@
     try{
         $db = new PDO('mysql:host=localhost;dbname=rlx;charset=utf8','root','');
     }catch(PDOException $e){
-        echo 'Hata: '.$e->getMessage();
+        echo 'Error: '.$e->getMessage();
     }
 
     function is_ajax()
